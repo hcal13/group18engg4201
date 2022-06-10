@@ -75,7 +75,7 @@ void setup() {
   veml.setHighThreshold(20000);
   veml.interruptEnable(true);
 
-  
+  origin = new AnalogRead(moist);
 
 
   // check for the WiFi module:
@@ -123,7 +123,6 @@ void loop() {
   
   
   //Moisture Sensor V2
-  origin = new AnalogRead(moist);
   Serial.print(" Moisture level: ");
   moisture = origin->read();
   Serial.print(moisture);
